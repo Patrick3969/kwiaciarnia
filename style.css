@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F3F7FA;
+    font-family: 'Inter', sans-serif;
 }
 
 header {
@@ -24,18 +25,194 @@ header {
 }
 
 
+/* karty */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.container h2 {}
+
+.container li {
+    width: 300px;
+}
+
+.box {
+    flex-grow: 1;
+    height: auto;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: white;
+    -webkit-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+    .box:last-child {
+        width: 100%;
+    }
+    .container .box li {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+    .box {
+        width: calc(100% - 20px);
+    }
+    .container li {
+        width: 90%;
+    }
+}
+
+
+/* o nas */
+
+.o-nas {
+    background-color: #3D389A;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding-bottom: 10vw;
+}
+
+.o-nas h2 {
+    font-size: 75px;
+}
+
+@media (max-width: 480px) {
+    .o-nas h2 {
+        font-size: 40px;
+    }
+}
+
+.o-nas p {
+    font-size: 20px;
+    margin: 0 10vw 0 10vw;
+}
+
+
+/* karty img */
+
+.container-img {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-img {
+    flex-grow: 1;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 30px;
+    -webkit-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+}
+
+@media (max-width: 480px) {
+    .container-img {
+        flex-direction: column;
+    }
+    .box-img {
+        width: calc(100% - 20px);
+    }
+}
+
+
+/* form */
+
+.box-form {
+    margin-top: 100px;
+    background-color: #D9D9D9;
+    width: 75vw;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding-bottom: 10vw;
+    padding-top: 2.5vw;
+    -webkit-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+}
+
+@media (max-width: 480px) {
+    .box-form {
+        width: calc(100vw - 10px);
+    }
+}
+
+.box-form h2 {
+    font-size: 75px;
+    text-align: center;
+    padding-bottom: 7.5vw;
+}
+
+@media (max-width: 480px) {
+    .box-form h2 {
+        font-size: 40px;
+        padding-bottom: 4vw;
+    }
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
 /* nav */
 
 nav {
-    font-family: 'Inter', sans-serif;
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    width: 100vw; */
+    width: 100vw;
     height: 10em;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    -webkit-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 30px -15px rgba(66, 68, 90, 1);
 }
 
 nav ul {
@@ -139,4 +316,37 @@ nav button {
     .logo {
         font-size: 2em;
     }
+}
+
+
+/* stopka */
+
+.footer {
+    margin-top: 100px;
+    background-color: #3D389A;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-media-icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-media-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
 }
